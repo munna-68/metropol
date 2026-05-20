@@ -1,0 +1,55 @@
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
+import { galleryItems } from "../data";
+
+function GalleryCard({ item }) {
+  return (
+    <div
+      className={`${item.spanClass} ${item.wrapperClass} ${item.marginClass || ""}`.trim()}
+    >
+      <div className={item.frameClass}>
+        <img
+          alt={item.alt}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          src={item.image}
+        />
+        <div className="absolute inset-unit border border-on-tertiary-container opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      </div>
+      <div className="mt-4 flex justify-between items-baseline">
+        <span className="font-label-caps text-label-caps text-primary">
+          {item.title}
+        </span>
+        <span className="font-label-caps text-label-caps text-on-surface-variant opacity-60">
+          {item.number}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+export default function GalleryPage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader variant="page" />
+      <main className="pt-[140px] pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+        <header className="mb-section-gap max-w-2xl">
+          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+            The Atmosphere
+          </h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">
+            A visual journey through METROPOL. Raw industrial materials
+            intersect with refined hospitality, creating an environment that is
+            both historically grounded and distinctly modern.
+          </p>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          {galleryItems.map((item) => (
+            <GalleryCard key={item.number} item={item} />
+          ))}
+        </div>
+      </main>
+      <SiteFooter variant="gallery" />
+    </div>
+  );
+}
