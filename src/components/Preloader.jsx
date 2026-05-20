@@ -3,7 +3,10 @@ import { useEffect } from "react";
 
 const container = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { when: "beforeChildren", staggerChildren: 0.08 } },
+  visible: {
+    opacity: 1,
+    transition: { when: "beforeChildren", staggerChildren: 0.08 },
+  },
   exit: { opacity: 0, transition: { duration: 0.4 } },
 };
 

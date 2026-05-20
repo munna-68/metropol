@@ -4,7 +4,11 @@ import { useRef } from "react";
 const animations = {
   fadeInUp: {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   },
   fadeIn: {
     hidden: { opacity: 0 },
@@ -16,7 +20,12 @@ const animations = {
   },
 };
 
-export default function AnimatedContainer({ children, animation = "fadeInUp", className = "", delay = 0 }) {
+export default function AnimatedContainer({
+  children,
+  animation = "fadeInUp",
+  className = "",
+  delay = 0,
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
