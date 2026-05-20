@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import AnimatedContainer from "../components/AnimatedContainer";
 import { featuredDishes } from "../data";
 
 function FeaturedDishCard({ dish }) {
@@ -49,11 +50,11 @@ export default function HomePage() {
             <img
               alt="Signature Dish"
               className="w-full h-full object-cover object-center"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbeA07Oa2hr1951sZRF_NjZUVEZ9Zdrp0YAKjpJqbvWCrdvLkXQMN8ITEnm_MarWj9jzNltE02lLjWU-jkZHcL99w_0BTKcDzCKRAZ3HG8IgI6QKUV9paZ4hM6SYtUHj6G_3CsJhqeQIdVrGjFC7-EbjFb9tHkgv6c10UxWkDLde15H7SbDJ2fNTcghx3P2ixm2LXDWgoL5HAb3-_JNjNaMz_ASCIwpwml7kH3xnCY6mdC48_ImPCiP7M2Nj9RQIPrP_D66TnBOQI"
+              src="/assets/hero-steak.jpg"
             />
             <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]" />
           </div>
-          <div className="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+          <AnimatedContainer className="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
             <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-6 drop-shadow-lg">
               Culinary Precision.
               <br />
@@ -69,7 +70,7 @@ export default function HomePage() {
             >
               RESERVE A TABLE
             </Link>
-          </div>
+          </AnimatedContainer>
         </section>
 
         <section
@@ -79,11 +80,13 @@ export default function HomePage() {
           <div className="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1 relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 border-t border-l border-primary/20" />
-              <img
-                alt="Metropol Interior"
-                className="w-full h-auto rounded object-cover shadow-sm grayscale-[20%]"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTw6SgelakAnxr1-6OEb7xfWMqpQOSFdZYNpcWYTjKAD_1jGmhDniXj2lgMKW9mXdvKeno689V6926FoUnY7q-7EQadJxSRqEwYcW2x54x86AzQv7y7nbpxM5todrerHyHUkW5Va3TnwDm6kIEqLXxNwQuFRSpR79Q5tHfPYNVNUQQ-de1RI5Q-wMGdOLZZa-hVfovpI-Ft50FxXCb1NydaTHg3I10DysaO7-XMnf_pCvOH7DCtF6-ochxDPxls22KLKTWCDXbrw"
-              />
+              <AnimatedContainer className="w-full h-auto rounded overflow-hidden">
+                <img
+                  alt="Metropol Interior"
+                  className="w-full h-auto rounded object-cover shadow-sm grayscale-[20%]"
+                  src="/assets/home-story.jpg"
+                />
+              </AnimatedContainer>
             </div>
             <div className="order-1 md:order-2">
               <span className="font-label-caps text-label-caps text-on-tertiary-container block mb-4">

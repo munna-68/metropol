@@ -1,11 +1,14 @@
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import AnimatedContainer from "../components/AnimatedContainer";
 import { galleryItems } from "../data";
 
-function GalleryCard({ item }) {
+function GalleryCard({ item, index = 0 }) {
   return (
-    <div
+    <AnimatedContainer
+      animation="fadeInUp"
       className={`${item.spanClass} ${item.wrapperClass} ${item.marginClass || ""}`.trim()}
+      delay={index * 0.06}
     >
       <div className={item.frameClass}>
         <img
@@ -23,7 +26,7 @@ function GalleryCard({ item }) {
           {item.number}
         </span>
       </div>
-    </div>
+    </AnimatedContainer>
   );
 }
 
@@ -44,8 +47,8 @@ export default function GalleryPage() {
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          {galleryItems.map((item) => (
-            <GalleryCard key={item.number} item={item} />
+          {galleryItems.map((item, i) => (
+            <GalleryCard key={item.number} item={item} index={i} />
           ))}
         </div>
       </main>
