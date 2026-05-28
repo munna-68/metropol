@@ -59,3 +59,17 @@ body {
   opacity: 0.03;
   pointer-events: none;
 }
+
+/* Scroll-triggered animation utilities */
+.text-reveal-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.image-reveal-mask {
+  clip-path: inset(100% 0% 0% 0%);
+  overflow: hidden;
+}
+
+.image-reveal-mask.revealed {
+  clip-path: inset(0% 0% 0% 0%);
+}

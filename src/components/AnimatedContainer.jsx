@@ -1,5 +1,6 @@
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef } from "react";
+import useScrollReveal from "../hooks/useScrollReveal";
 
 const animations = {
   fadeInUp: {
@@ -27,7 +28,7 @@ export default function AnimatedContainer({
   delay = 0,
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useScrollReveal(ref, { delay: 300 });
 
   const variant = animations[animation] || animations.fadeInUp;
 

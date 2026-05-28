@@ -6,21 +6,23 @@ import GalleryPage from "./pages/GalleryPage";
 import ReservationsPage from "./pages/ReservationsPage";
 
 function ScrollToTop() {
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [pathname]);
 
   return null;
 }
 
 export default function App() {
+  const location = useLocation();
+
   return (
     <div className="relative min-h-screen bg-background text-on-background">
       <div className="grain-overlay fixed inset-0 z-[60] pointer-events-none" />
       <ScrollToTop />
-      <Routes>
+      <Routes location={location} key={location.pathname}>
         <Route path="/" element={<HomePage />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/gallery" element={<GalleryPage />} />

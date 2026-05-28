@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
+import ImageReveal from "../components/ImageReveal";
 import { reservations } from "../data";
 
 export default function ReservationsPage() {
@@ -188,12 +189,14 @@ export default function ReservationsPage() {
             </div>
 
             <div className="flex flex-col gap-gutter">
-              <div className="h-[300px] w-full bg-surface-container-high relative overflow-hidden">
-                <img
-                  alt="Map"
-                  className="object-cover w-full h-full opacity-80 grayscale"
-                  src={reservations.mapImage}
-                />
+              <div className="h-[300px] w-full bg-surface-container-high">
+                <ImageReveal className="w-full h-full" delay={0.1}>
+                  <img
+                    alt="Map"
+                    className="object-cover w-full h-full opacity-80 grayscale"
+                    src={reservations.mapImage}
+                  />
+                </ImageReveal>
               </div>
               <div className="border border-primary/10 p-8 flex-1 bg-surface-container-lowest">
                 <h3 className="font-headline-md text-headline-md mb-6">
