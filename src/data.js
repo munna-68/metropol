@@ -8,6 +8,7 @@ export const footerLinks = ["Privacy Policy", "Accessibility", "Press"];
 
 export const featuredDishes = [
   {
+    id: "charred-wagyu",
     title: "Charred Wagyu",
     price: "68",
     tag: "GF",
@@ -17,6 +18,7 @@ export const featuredDishes = [
     alt: "A top-down view of a sophisticated steak dish. A perfectly medium-rare wagyu beef filet is sliced and fanned out on a dark slate plate. It is accompanied by a purée of roasted parsnip, charred pearl onions, and a rich, dark demi-glace. The lighting is moody and focused, highlighting the juiciness of the meat against the industrial servingware.",
   },
   {
+    id: "hamachi-crudo",
     title: "Hamachi Crudo",
     price: "24",
     description: "Yuzu kosho, compressed cucumber, white soy, nasturtium.",
@@ -24,6 +26,7 @@ export const featuredDishes = [
     alt: "A delicate and modern seafood appetizer. Fresh, translucent slices of hamachi crudo are arranged beautifully on a chilled white ceramic plate. The dish is accented with thin rings of jalapeño, micro-cilantro, and a bright, citrusy ponzu sauce. The aesthetic is clean, minimalist, and refreshing, with bright, natural lighting.",
   },
   {
+    id: "structure",
     title: "Structure",
     price: "18",
     tag: "V",
@@ -36,6 +39,7 @@ export const featuredDishes = [
 
 export const menuStarters = [
   {
+    id: "smoked-steelhead-trout",
     title: "Smoked Steelhead Trout",
     price: "24",
     tag: "GF",
@@ -43,6 +47,7 @@ export const menuStarters = [
       "Celeriac remoulade, pickled mustard seed, dill oil, charred rye crisp.",
   },
   {
+    id: "roasted-bone-marrow",
     title: "Roasted Bone Marrow",
     price: "28",
     description:
@@ -57,6 +62,7 @@ export const menuStarterImage = {
 
 export const menuMains = [
   {
+    id: "dry-aged-duck-breast",
     title: "Dry-Aged Duck Breast",
     price: "48",
     description:
@@ -65,6 +71,7 @@ export const menuMains = [
     alt: "A perfectly plated dry-aged duck breast, sliced to show a rosy pink interior, resting on a smooth parsnip purée. The dish is accented with dark, glossy blackberry gastrique and charred greens. The lighting is directional and warm, highlighting the crispy skin of the duck against a matte, charcoal-toned plate. The overall aesthetic is refined and minimalist.",
   },
   {
+    id: "charred-hispi-cabbage",
     title: "Charred Hispi Cabbage",
     price: "32",
     tag: "V",
@@ -72,6 +79,49 @@ export const menuMains = [
       "Miso brown butter, toasted hazelnuts, crispy enoki mushrooms, chive oil.",
     image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAqLnJzNZ4PoBqVhSHMHpwr7ym6k8vZUdSBizWUJXoHW5BtML2a193n4b8ckfeY3n-7amke6fViBHsj82fqMbL4LFKs-ycswfOFsYGMfLryv_bZ2v3t_GBgQP1AKle-Pbkz3xWeKJ7F29DzjR0LkueoPqA8VZErLigum-09pT09Tc40zsSdfAztxjKMza5nlHkfy7NP26IRvsflQxiBEkeq44XXztwCTuRH1CyMIEEbIcGBJdv6xvE1xn31SV9CKkFN3QkTrPHG3LI",
     alt: "An elegant vegetarian dish featuring deeply charred Hispi cabbage drizzled with glossy miso brown butter and chive oil. Scattered toasted hazelnuts add texture. The presentation is modern and architectural, set against a stark white background with subtle natural shadows. The lighting is clean and bright, reflecting a sophisticated, light-mode dining experience.",
+  },
+];
+
+export const menuDesserts = [
+  {
+    id: "chocolate-dome",
+    title: "Chocolate Dome",
+    price: "18",
+    tag: "V",
+    description:
+      "Valrhona dark chocolate, espresso caramel, smoked sea salt gelato.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB_NWGKvIw4WsfwwdVUp6S9aOBBQeiinBDTdyZvrawgo_l8c1LlSFMAZMQlU2jh9IRMiJTdUTVnw1RsqQux0so-8h-wDB-F64Ub4mZjWLmXwELtJcBC70QUvXtPdf3JUIi_KLmeT0_7nXFrV0VvAlQLv_oudDtd6_nmZg95MqUNzfjmayLvNCP4gLEUl0jtdN07NR4eYuyKwzi9KBCCZuIv8PC_FMqaw9CEeiIfxIdH3ubnbUZEdYZoFh7dASOmgI_TkwpNTOrO9SU",
+    alt: "An elegant dark chocolate dome dessert with espresso caramel.",
+  },
+  {
+    id: "citrus-posset",
+    title: "Citrus Posset",
+    price: "16",
+    description:
+      "Meyer lemon posset, candied thyme, shortbread crumble, blood orange.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDsgcqsnWdDI5dTZAlafpmXzw0ecEQdimV2mPpcGbcrInRuBcXmbxGm8LOTOzYQzzfPsKuzd-Mq6UmIO3CVyj2z9Fubil6GVziWUkRgeRPFbaBlMqb8XnhYoBS8YpRHYyU5KjnNKpuelmzSBLg55xdgSWOw1qX40SxxpTdGfe_xJz227_t-fwo7z6-ptckma25Pk1bBnXigopVGBfHJCHyFhM5XvsVgFtRTc1_d35UZAomuRD74cBT4IeVhQQKCTeWyEGfSawgQSrM",
+    alt: "A bright and refreshing citrus posset dessert.",
+  },
+];
+
+export const menuCocktails = [
+  {
+    id: "smoked-old-fashioned",
+    title: "Smoked Old Fashioned",
+    price: "22",
+    description:
+      "Bulleit bourbon, demerara sugar, Angostura bitters, applewood smoke.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBDju4yy9mWwO4wg2lefbH_Uo4Y_AbKBwBCuItRVzRu1cOvLpWK4JaT32C5CtADAjzSyzMntyAo__iBr57Svy5bKh9RfCJeusO9BcXe2LzO5n2-_bxQFI4QMIq4oJ4lz41ubSoyjnGcDduWfh-fVKiondq3L9pzzePC0UeUjLRBHaz8qJOFKQ5qUFExk4dkoO_ZinStsQ7JU7KglXKEhNN8jv3H19dWPnzibjshg_q5Vjy7hP3OSE4KtteUHcuau2pB4g2gA5u9tAQ",
+    alt: "A smoky old fashioned cocktail in a crystal glass.",
+  },
+  {
+    id: "industrial-sour",
+    title: "Industrial Sour",
+    price: "20",
+    description:
+      "Grey Goose vodka, fresh lemon, elderflower liqueur, egg white foam.",
+    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6t6-__03MoSdMu9rKPPBNVBhnjJFppOrTs3MW1MGw7CDcDyq-VG1gBLMhahv9IpoO47R_wHDUysv8GbJevIvGFZK1IEVPDvkm-BKWMEIqhx4lJkT92RujXvUVNCEgk5Z0oPV-rNaMrBKhmFffo3sLSu2aCIeYSPMeYDnL-G76Ga8LQYq1ifTEBjdvCR-F3ducjDnP7GEOJ8DICah02P-go1Oulg1Gk3xMVdU5U93GLgJMuBcoxWoTIV6NPsRf-jLcjd3ZWBf99W0",
+    alt: "A sophisticated sour cocktail with egg white foam.",
   },
 ];
 

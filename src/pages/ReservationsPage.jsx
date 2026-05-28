@@ -15,7 +15,7 @@ export default function ReservationsPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SiteHeader variant="page" />
+      <SiteHeader />
       <main className="pt-[72px]">
         <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto text-center">
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">

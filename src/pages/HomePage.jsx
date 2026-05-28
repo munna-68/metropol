@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 import AnimatedContainer from "../components/AnimatedContainer";
 import TextReveal from "../components/TextReveal";
 import ImageReveal from "../components/ImageReveal";
+import DishModal from "../components/DishModal";
 import { featuredDishes } from "../data";
 
-function FeaturedDishCard({ dish }) {
+function FeaturedDishCard({ dish, onClick }) {
   return (
-    <div className="flex flex-col border border-primary/10 rounded overflow-hidden group hover:border-primary/30 transition-colors bg-surface-container-lowest">
+    <div
+      onClick={onClick}
+      className="flex flex-col border border-primary/10 rounded overflow-hidden group hover:border-primary/30 transition-colors bg-surface-container-lowest cursor-pointer"
+    >
       <div className="h-64 relative">
         <ImageReveal className="w-full h-full" delay={0.1}>
           <img
@@ -45,9 +50,11 @@ function FeaturedDishCard({ dish }) {
 }
 
 export default function HomePage() {
+  const [selectedDish, setSelectedDish] = useState(null);
+
   return (
     <div className="min-h-screen flex flex-col relative">
-      <SiteHeader variant="home" />
+      <SiteHeader />
       <main className="flex-grow pt-[72px]">
         <section className="relative h-[819px] min-h-[600px] w-full flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -155,8 +162,11 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
               {featuredDishes.map((dish, index) => (
-                <AnimatedContainer key={dish.title} delay={index * 0.15}>
-                  <FeaturedDishCard dish={dish} />
+                <AnimatedContainer key={dish.id} delay={index * 0.15}>
+                  <FeaturedDishCard
+                    dish={dish}
+                    onClick={() => setSelectedDish(dish)}
+                  />
                 </AnimatedContainer>
               ))}
             </div>
@@ -174,6 +184,8 @@ export default function HomePage() {
         </section>
       </main>
       <SiteFooter variant="standard" />
+
+      <DishModal dish={selectedDish} onClose={() => setSelectedDish(null)} />
     </div>
   );
 }
